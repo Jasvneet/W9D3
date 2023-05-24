@@ -6,19 +6,21 @@ import TweetCompose from "./tweet_compose";
 import Followers from "./followers";
 import { API } from "./util";
 
+
 if (process.env.NODE_ENV !== "production") {
   window.API = API;
 }
 
-let followToggleSelector = "";
-let infiniteTweetsSelector = "";
-let usersSearchSelector = "";
-let tweetComposeSelector = "";
-let followersSelector = "";
+let followToggleSelector = ".follow-toggle";
+let infiniteTweetsSelector = ".infinite-tweets";
+let usersSearchSelector = ".users-search";
+let tweetComposeSelector = ".tweet-compose";
+let followersSelector = ".followers";
 
 
 document.querySelectorAll(followToggleSelector).forEach((el) => {
   new FollowToggle(el);
+  
 });
 
 document.querySelectorAll(infiniteTweetsSelector).forEach((el) => {
